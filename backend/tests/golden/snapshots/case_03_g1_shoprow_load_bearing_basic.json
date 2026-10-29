@@ -1,0 +1,475 @@
+{
+  "contingency_inr": 103396.16,
+  "line_count": 49,
+  "lines": [
+    {
+      "amount_inr": 5548.48,
+      "element": "substructure",
+      "qty": 17.339,
+      "rate_code": "EARTH_EXC_ORDINARY",
+      "rate_inr": 320.0,
+      "seq": 1,
+      "unit": "m3"
+    },
+    {
+      "amount_inr": 10821.2,
+      "element": "substructure",
+      "qty": 2.081,
+      "rate_code": "PCC_1_4_8",
+      "rate_inr": 5200.0,
+      "seq": 2,
+      "unit": "m3"
+    },
+    {
+      "amount_inr": 42868.8,
+      "element": "substructure",
+      "qty": 5.954,
+      "rate_code": "RCC_M20_FOOTING",
+      "rate_inr": 7200.0,
+      "seq": 3,
+      "unit": "m3"
+    },
+    {
+      "amount_inr": 25302.38,
+      "element": "substructure",
+      "qty": 297.675,
+      "rate_code": "STEEL_FE500_FOOTING",
+      "rate_inr": 85.0,
+      "seq": 4,
+      "unit": "kg"
+    },
+    {
+      "amount_inr": 7938.0,
+      "element": "substructure",
+      "qty": 18.9,
+      "rate_code": "FORMWORK_FOOTING",
+      "rate_inr": 420.0,
+      "seq": 5,
+      "unit": "m2"
+    },
+    {
+      "amount_inr": 2184.84,
+      "element": "substructure",
+      "qty": 12.138,
+      "rate_code": "BACKFILL",
+      "rate_inr": 180.0,
+      "seq": 6,
+      "unit": "m3"
+    },
+    {
+      "amount_inr": 12100.0,
+      "element": "substructure",
+      "qty": 110.0,
+      "rate_code": "ANTITERMITE",
+      "rate_inr": 110.0,
+      "seq": 7,
+      "unit": "m2"
+    },
+    {
+      "amount_inr": 2967.86,
+      "element": "substructure",
+      "qty": 10.234,
+      "rate_code": "DPC",
+      "rate_inr": 290.0,
+      "seq": 8,
+      "unit": "m2"
+    },
+    {
+      "amount_inr": 0.0,
+      "element": "frame",
+      "qty": 0.0,
+      "rate_code": "RCC_M25_COLUMN",
+      "rate_inr": 8900.0,
+      "seq": 1,
+      "unit": "m3"
+    },
+    {
+      "amount_inr": 55819.5,
+      "element": "frame",
+      "qty": 6.567,
+      "rate_code": "RCC_M25_BEAM",
+      "rate_inr": 8500.0,
+      "seq": 2,
+      "unit": "m3"
+    },
+    {
+      "amount_inr": 225500.0,
+      "element": "frame",
+      "qty": 27.5,
+      "rate_code": "RCC_M25_SLAB",
+      "rate_inr": 8200.0,
+      "seq": 3,
+      "unit": "m3"
+    },
+    {
+      "amount_inr": 3872.8,
+      "element": "frame",
+      "qty": 0.412,
+      "rate_code": "RCC_M25_STAIR",
+      "rate_inr": 9400.0,
+      "seq": 4,
+      "unit": "m3"
+    },
+    {
+      "amount_inr": 0.0,
+      "element": "frame",
+      "qty": 0.0,
+      "rate_code": "STEEL_FE500_COLUMN",
+      "rate_inr": 85.0,
+      "seq": 5,
+      "unit": "kg"
+    },
+    {
+      "amount_inr": 50237.89,
+      "element": "frame",
+      "qty": 591.034,
+      "rate_code": "STEEL_FE500_BEAM",
+      "rate_inr": 85.0,
+      "seq": 6,
+      "unit": "kg"
+    },
+    {
+      "amount_inr": 163625.0,
+      "element": "frame",
+      "qty": 1925.0,
+      "rate_code": "STEEL_FE500_SLAB",
+      "rate_inr": 85.0,
+      "seq": 7,
+      "unit": "kg"
+    },
+    {
+      "amount_inr": 0.0,
+      "element": "frame",
+      "qty": 0.0,
+      "rate_code": "FORMWORK_COLUMN",
+      "rate_inr": 540.0,
+      "seq": 8,
+      "unit": "m2"
+    },
+    {
+      "amount_inr": 45422.88,
+      "element": "frame",
+      "qty": 94.631,
+      "rate_code": "FORMWORK_BEAM",
+      "rate_inr": 480.0,
+      "seq": 9,
+      "unit": "m2"
+    },
+    {
+      "amount_inr": 101200.0,
+      "element": "frame",
+      "qty": 220.0,
+      "rate_code": "FORMWORK_SLAB",
+      "rate_inr": 460.0,
+      "seq": 10,
+      "unit": "m2"
+    },
+    {
+      "amount_inr": 421488.6,
+      "element": "masonry",
+      "qty": 54.037,
+      "rate_code": "BRICK_EXT_230",
+      "rate_inr": 7800.0,
+      "seq": 1,
+      "unit": "m3"
+    },
+    {
+      "amount_inr": 319902.0,
+      "element": "masonry",
+      "qty": 43.23,
+      "rate_code": "BRICK_INT_115",
+      "rate_inr": 7400.0,
+      "seq": 2,
+      "unit": "m3"
+    },
+    {
+      "amount_inr": 80848.6,
+      "element": "masonry",
+      "qty": 10.234,
+      "rate_code": "BRICK_PARAPET",
+      "rate_inr": 7900.0,
+      "seq": 3,
+      "unit": "m3"
+    },
+    {
+      "amount_inr": 236824.8,
+      "element": "finishes",
+      "qty": 986.77,
+      "rate_code": "PLASTER_INT",
+      "rate_inr": 240.0,
+      "seq": 1,
+      "unit": "m2"
+    },
+    {
+      "amount_inr": 75182.4,
+      "element": "finishes",
+      "qty": 234.945,
+      "rate_code": "PLASTER_EXT",
+      "rate_inr": 320.0,
+      "seq": 2,
+      "unit": "m2"
+    },
+    {
+      "amount_inr": 48400.0,
+      "element": "finishes",
+      "qty": 220.0,
+      "rate_code": "PLASTER_CEILING",
+      "rate_inr": 220.0,
+      "seq": 3,
+      "unit": "m2"
+    },
+    {
+      "amount_inr": 54272.35,
+      "element": "finishes",
+      "qty": 986.77,
+      "rate_code": "PAINT_INT",
+      "rate_inr": 55.0,
+      "seq": 4,
+      "unit": "m2"
+    },
+    {
+      "amount_inr": 21145.05,
+      "element": "finishes",
+      "qty": 234.945,
+      "rate_code": "PAINT_EXT",
+      "rate_inr": 90.0,
+      "seq": 5,
+      "unit": "m2"
+    },
+    {
+      "amount_inr": 175940.0,
+      "element": "finishes",
+      "qty": 185.2,
+      "rate_code": "FLOORING",
+      "rate_inr": 950.0,
+      "seq": 6,
+      "unit": "m2"
+    },
+    {
+      "amount_inr": 40950.0,
+      "element": "finishes",
+      "qty": 63.0,
+      "rate_code": "DADO",
+      "rate_inr": 650.0,
+      "seq": 7,
+      "unit": "m2"
+    },
+    {
+      "amount_inr": 12750.0,
+      "element": "finishes",
+      "qty": 15.0,
+      "rate_code": "WET_FLOORING",
+      "rate_inr": 850.0,
+      "seq": 8,
+      "unit": "m2"
+    },
+    {
+      "amount_inr": 21785.76,
+      "element": "finishes",
+      "qty": 121.032,
+      "rate_code": "SKIRTING",
+      "rate_inr": 180.0,
+      "seq": 9,
+      "unit": "m"
+    },
+    {
+      "amount_inr": 55000.0,
+      "element": "finishes",
+      "qty": 44.0,
+      "rate_code": "FALSE_CEILING",
+      "rate_inr": 1250.0,
+      "seq": 10,
+      "unit": "m2"
+    },
+    {
+      "amount_inr": 15876.0,
+      "element": "doors_windows",
+      "qty": 3.78,
+      "rate_code": "DOOR_MAIN",
+      "rate_inr": 4200.0,
+      "seq": 1,
+      "unit": "m2"
+    },
+    {
+      "amount_inr": 84672.0,
+      "element": "doors_windows",
+      "qty": 30.24,
+      "rate_code": "DOOR_INT",
+      "rate_inr": 2800.0,
+      "seq": 2,
+      "unit": "m2"
+    },
+    {
+      "amount_inr": 81180.0,
+      "element": "doors_windows",
+      "qty": 99.0,
+      "rate_code": "DOOR_FRAME",
+      "rate_inr": 820.0,
+      "seq": 3,
+      "unit": "m"
+    },
+    {
+      "amount_inr": 70483.6,
+      "element": "doors_windows",
+      "qty": 32.038,
+      "rate_code": "WINDOW",
+      "rate_inr": 2200.0,
+      "seq": 4,
+      "unit": "m2"
+    },
+    {
+      "amount_inr": 128151.9,
+      "element": "doors_windows",
+      "qty": 711.955,
+      "rate_code": "GRILL_MS",
+      "rate_inr": 180.0,
+      "seq": 5,
+      "unit": "kg"
+    },
+    {
+      "amount_inr": 46200.0,
+      "element": "waterproofing",
+      "qty": 110.0,
+      "rate_code": "WP_TERRACE",
+      "rate_inr": 420.0,
+      "seq": 1,
+      "unit": "m2"
+    },
+    {
+      "amount_inr": 9750.0,
+      "element": "waterproofing",
+      "qty": 15.0,
+      "rate_code": "WP_TOILET",
+      "rate_inr": 650.0,
+      "seq": 2,
+      "unit": "m2"
+    },
+    {
+      "amount_inr": 114950.0,
+      "element": "services",
+      "qty": 121.0,
+      "rate_code": "ELEC_POINT",
+      "rate_inr": 950.0,
+      "seq": 1,
+      "unit": "nos"
+    },
+    {
+      "amount_inr": 84000.0,
+      "element": "services",
+      "qty": 2.0,
+      "rate_code": "ELEC_MAIN",
+      "rate_inr": 42000.0,
+      "seq": 2,
+      "unit": "nos"
+    },
+    {
+      "amount_inr": 75000.0,
+      "element": "services",
+      "qty": 3.0,
+      "rate_code": "PLUMBING",
+      "rate_inr": 25000.0,
+      "seq": 3,
+      "unit": "nos"
+    },
+    {
+      "amount_inr": 54000.0,
+      "element": "services",
+      "qty": 3.0,
+      "rate_code": "SANITARY",
+      "rate_inr": 18000.0,
+      "seq": 4,
+      "unit": "nos"
+    },
+    {
+      "amount_inr": 117576.0,
+      "element": "external_works",
+      "qty": 48.99,
+      "rate_code": "COMPOUND_WALL",
+      "rate_inr": 2400.0,
+      "seq": 1,
+      "unit": "m"
+    },
+    {
+      "amount_inr": 32800.0,
+      "element": "external_works",
+      "qty": 40.0,
+      "rate_code": "DRIVEWAY_PAVE",
+      "rate_inr": 820.0,
+      "seq": 2,
+      "unit": "m2"
+    },
+    {
+      "amount_inr": 32000.0,
+      "element": "external_works",
+      "qty": 1.0,
+      "rate_code": "GATE_MS",
+      "rate_inr": 32000.0,
+      "seq": 3,
+      "unit": "nos"
+    },
+    {
+      "amount_inr": 45000.0,
+      "element": "external_works",
+      "qty": 1.0,
+      "rate_code": "LANDSCAPE",
+      "rate_inr": 45000.0,
+      "seq": 4,
+      "unit": "nos"
+    },
+    {
+      "amount_inr": 18000.0,
+      "element": "miscellaneous",
+      "qty": 1.0,
+      "rate_code": "WATER_TANK_OHT",
+      "rate_inr": 18000.0,
+      "seq": 1,
+      "unit": "nos"
+    },
+    {
+      "amount_inr": 85000.0,
+      "element": "miscellaneous",
+      "qty": 1.0,
+      "rate_code": "SUMP_UGR",
+      "rate_inr": 85000.0,
+      "seq": 2,
+      "unit": "nos"
+    },
+    {
+      "amount_inr": 32000.0,
+      "element": "miscellaneous",
+      "qty": 1.0,
+      "rate_code": "RWH",
+      "rate_inr": 32000.0,
+      "seq": 3,
+      "unit": "nos"
+    }
+  ],
+  "params": {
+    "aspect_ratio": 2.0,
+    "builtup_area_m2": 220.0,
+    "floor_height_m": 3.0,
+    "floors": 2,
+    "location": "Lucknow",
+    "plan_shape": "rectangular",
+    "plot_area_m2": 150.0,
+    "sbc_kpa": 120.0,
+    "source": "form",
+    "spec_level": "basic",
+    "structural_system": "load_bearing",
+    "use_type": "mixed_use"
+  },
+  "prelims_inr": 68930.77,
+  "subtotal_inr": 3446538.69,
+  "total_inr": 3618865.62,
+  "totals_by_element": {
+    "doors_windows": 380363.5,
+    "external_works": 227376.0,
+    "finishes": 742250.36,
+    "frame": 645678.07,
+    "masonry": 822239.2,
+    "miscellaneous": 135000.0,
+    "services": 327950.0,
+    "substructure": 109731.56,
+    "waterproofing": 55950.0
+  }
+}

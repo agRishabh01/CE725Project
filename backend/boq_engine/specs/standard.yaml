@@ -1,0 +1,58 @@
+# Standard specification — middle-class residential / typical office / institutional.
+# Rates are placeholders (INR / unit) until the DSR is imported in W4.
+
+spec_id: standard
+version: "0.1.0"
+label: "Standard (middle residential / typical office)"
+
+flooring:
+  material: "vitrified_tiles_600x600_premium"
+  rate_inr_per_m2: 1450
+
+skirting:
+  material: "vitrified_skirting_100mm_premium"
+  rate_inr_per_m: 230
+
+dado:
+  material: "ceramic_tiles_300x600"
+  rate_inr_per_m2: 850
+  height_m: 2.1
+
+internal_plaster:
+  thickness_mm: 12
+  rate_inr_per_m2: 290
+
+external_plaster:
+  thickness_mm: 20
+  rate_inr_per_m2: 380
+
+internal_paint:
+  material: "acrylic_emulsion"
+  rate_inr_per_m2: 110
+
+external_paint:
+  material: "acrylic_exterior"
+  rate_inr_per_m2: 165
+
+doors:
+  material: "wpc_door_internal"
+  rate_inr_per_m2: 4200
+  main_door_rate_inr_per_m2: 7500
+  average_leaf_m2: 1.89
+
+windows:
+  material: "upvc_sliding_sliding_3track"
+  rate_inr_per_m2: 3400
+  wwr: 0.15
+
+sanitary:
+  per_toilet_lumpsum_inr: 42000
+  toilets_per_100m2_builtup: 1.5
+
+electrical:
+  points_per_m2_builtup: 0.75
+  rate_inr_per_point: 1300
+
+waterproofing:
+  terrace_rate_inr_per_m2: 560
+  toilet_rate_inr_per_m2: 820

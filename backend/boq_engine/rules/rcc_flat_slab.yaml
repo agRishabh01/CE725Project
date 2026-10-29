@@ -1,0 +1,55 @@
+# RCC flat slab — slab-on-columns (no main beams), drop panels at supports.
+# Key differences from rcc_framed: thicker slab, edge beams only, bigger columns per floor.
+
+rule_set_id: rcc_flat_slab
+version: "0.1.0"
+system: rcc_flat_slab
+applicable_floors: [1, 12]
+source: "IS 456:2000 §31; SP 24; Rangwala §12.4"
+
+geometry:
+  default_span_m: 6.0            # flat slab economical in 5-8 m range
+  min_bay_m: 4.0
+  max_bay_m: 8.0
+
+sizing:
+  column_tiers:
+    # Flat-slab columns punch harder → one tier larger than framed per floor count.
+    - {min_floors: 1, max_floors: 3, b_mm: 300, d_mm: 300}
+    - {min_floors: 4, max_floors: 6, b_mm: 400, d_mm: 400}
+    - {min_floors: 7, max_floors: 9, b_mm: 500, d_mm: 500}
+    - {min_floors: 10, max_floors: 12, b_mm: 600, d_mm: 600}
+
+  # Edge beams only (perimeter) in flat slab. Width + depth tuned for stiffness, not main-beam.
+  beam:
+    depth_divisor: 14            # shallower than framed because beams only at edges
+    width_mm: 300
+    min_depth_mm: 350
+    rounding_mm: 25
+
+  # Slab is thick + flat. span/divisor with drop_panel allowance.
+  slab:
+    divisor: 28                  # thicker than framed (span/32)
+    min_thickness_mm: 180
+    max_thickness_mm: 275
+    rounding_mm: 25
+    drop_panel_thickness_mm: 100 # extra thickness within 0.3L of each column
+
+  footing:
+    load_per_m2_per_floor_kn: 16.0
+    self_weight_factor: 1.12
+    min_side_m: 1.2
+    depth_mm: 400
+    pcc_thickness_mm: 100
+
+consumption:
+  steel_kg_per_m3:
+    column: 170
+    beam: 120
+    slab: 110                    # higher than framed because of two-way flat slab reinf.
+    footing: 70
+  formwork_m2_per_m3:
+    column: 10
+    beam: 8
+    slab: 5
+    footing: 2

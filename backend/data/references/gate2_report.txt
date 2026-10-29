@@ -1,0 +1,21 @@
+=== Gate 2 verdict: PASS ===
+median total variance    : 1.19%  (target <= 20%)
+median element-weighted  : 8.29%  (target <= 20%)
+calibration <= +/-20%    : True
+held-out    <= +/-25%    : True
+
+  [ok] [calibration] case_01_g2_residential_rcc_basic
+      expected INR      7,200,000  ( 13,333/m2)
+      computed INR      8,027,302  ( 14,865/m2)
+      total delta: +11.49%   element weighted err: 14.35%
+
+  [ok] [calibration] case_02_g3_load_bearing_basic
+      expected INR     13,200,000  ( 13,750/m2)
+      computed INR     13,243,778  ( 13,796/m2)
+      total delta: +0.33%   element weighted err: 7.65%
+
+  [ok] [held_out   ] case_03_g1_office_rcc_standard
+      expected INR     14,000,000  ( 15,556/m2)
+      computed INR     13,833,203  ( 15,370/m2)
+      total delta: -1.19%   element weighted err: 8.29%
+

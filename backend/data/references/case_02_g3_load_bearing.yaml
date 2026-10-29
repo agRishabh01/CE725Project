@@ -1,0 +1,46 @@
+# Reference case 02 — G+3 load-bearing masonry residential, basic spec.
+#
+# Source: adapted from Rangwala "Building Construction" §13 and
+#         Chakraborty "Estimating & Costing" worked examples for brick-
+#         masonry residential blocks up to G+3 at CPWD DSR 2023 Delhi.
+# Role  : CALIBRATION set.
+
+case_id: case_02_g3_load_bearing_basic
+split: calibration
+source: "Rangwala §13 / Chakraborty — G+3 load-bearing residential"
+
+building_params:
+  use_type: residential
+  plot_area_m2: 420.0
+  builtup_area_m2: 960.0        # 4 floors × 240 m²
+  floors: 4
+  floor_height_m: 3.0
+  aspect_ratio: 1.5
+  structural_system: load_bearing
+  spec_level: basic
+  sbc_kpa: 140.0
+  plan_shape: rectangular
+  location: Delhi
+  source: form
+
+cost_index: 1.00
+
+expected:
+  total_inr: 13_200_000          # ~₹13,750 / m²
+  cost_per_m2: 13_750
+  # G+3 (floors=4) triggers the engine's lift line → miscellaneous jumps
+  # to ~₹1.4M. Element targets reflect that.
+  by_element:
+    substructure:    550_000
+    frame:         2_750_000     # bands + slabs (no columns in LB)
+    masonry:       2_200_000     # heavy wall share
+    finishes:      2_300_000
+    doors_windows: 1_400_000
+    waterproofing:   170_000
+    services:      1_450_000
+    external_works:  430_000
+    miscellaneous: 1_450_000     # includes the passenger lift (floors ≥ 4)
+
+benchmarks:
+  concrete_m3_per_m2: 0.14
+  steel_kg_per_m2: 15

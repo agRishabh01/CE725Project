@@ -1,0 +1,61 @@
+# RCC framed structure — baseline rule set.
+# Each coefficient is tunable per organization in Phase 2 (FR-5).
+# Sources: IS 456:2000, SP 34, Rangwala "Building Construction", Dutta "Estimating & Costing".
+
+rule_set_id: rcc_framed
+version: "0.1.0"
+system: rcc_framed
+applicable_floors: [1, 15]
+source: "IS 456:2000; Rangwala §12; Dutta §4"
+
+geometry:
+  # Default column spacing (m) along both axes. Typical for RCC framed residential/office.
+  default_span_m: 4.0
+  # Minimum allowed bay dimension; smaller is rounded up.
+  min_bay_m: 3.0
+  # Maximum bay before adding an intermediate column.
+  max_bay_m: 6.0
+
+sizing:
+  # Column cross-section selection by total floors.
+  # Each tier: {min_floors, max_floors, b_mm, d_mm}. b × d is a square or rectangular column.
+  column_tiers:
+    - {min_floors: 1, max_floors: 3, b_mm: 230, d_mm: 230}
+    - {min_floors: 4, max_floors: 6, b_mm: 300, d_mm: 300}
+    - {min_floors: 7, max_floors: 10, b_mm: 400, d_mm: 400}
+    - {min_floors: 11, max_floors: 15, b_mm: 500, d_mm: 500}
+
+  # Beam: depth = span / depth_divisor, width = beam_width_mm (fixed).
+  beam:
+    depth_divisor: 12         # IS 456 Table 23 (simply supported continuous ratio)
+    width_mm: 230
+    min_depth_mm: 300
+    rounding_mm: 25           # round up to nearest 25 mm
+
+  # Slab (two-way, continuous): thickness = span / slab_divisor
+  slab:
+    divisor: 32
+    min_thickness_mm: 125
+    max_thickness_mm: 200
+    rounding_mm: 25
+
+  # Isolated footing: area = axial_load / SBC; footing is square.
+  footing:
+    load_per_m2_per_floor_kn: 15.0   # DL + LL on tributary area
+    self_weight_factor: 1.10          # footing self-weight
+    min_side_m: 1.0
+    depth_mm: 300
+    pcc_thickness_mm: 100             # lean concrete under footing
+
+# Material consumption coefficients (per m³ of RCC) — for take-off in Week 3.
+consumption:
+  steel_kg_per_m3:
+    column: 150
+    beam: 110
+    slab: 80
+    footing: 65
+  formwork_m2_per_m3:
+    column: 10
+    beam: 8
+    slab: 5
+    footing: 2

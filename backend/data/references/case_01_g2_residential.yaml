@@ -1,0 +1,49 @@
+# Reference case 01 — G+2 residential, RCC framed, basic spec.
+#
+# Source: adapted from Dutta "Estimating & Costing in Civil Engineering",
+#         Ch. 7 preliminary estimate for a 3-storey residential block,
+#         adjusted to CPWD DSR 2023 rate base at Delhi (cost index 1.00).
+# Role  : CALIBRATION set (used to tune YAML coefficients).
+
+case_id: case_01_g2_residential_rcc_basic
+split: calibration
+source: "Dutta §7 — G+2 residential, 180 m² floor plate (approximated to CPWD DSR 2023 Delhi)"
+
+building_params:
+  use_type: residential
+  plot_area_m2: 300.0
+  builtup_area_m2: 540.0        # 3 floors × 180 m²
+  floors: 3
+  floor_height_m: 3.0
+  aspect_ratio: 1.4
+  structural_system: rcc_framed
+  spec_level: basic
+  sbc_kpa: 150.0
+  plan_shape: rectangular
+  location: Delhi
+  source: form
+
+cost_index: 1.00
+
+# Reference totals from the manual estimate. INR, including markup.
+expected:
+  total_inr: 7_200_000           # ~₹13,333 / m²
+  cost_per_m2: 13_333
+  # Per-element breakdown matched to the engine's element taxonomy, not the
+  # textbook's chapter order. Services here is just elec+plumbing+sanitary;
+  # miscellaneous is only tanks/sump/RWH (no lift for G+2); contingency is
+  # already baked into total_inr via the markup band.
+  by_element:
+    substructure:    310_000
+    frame:         1_950_000
+    masonry:       1_200_000
+    finishes:      1_350_000
+    doors_windows:   780_000
+    waterproofing:    95_000
+    services:        820_000
+    external_works:  395_000
+    miscellaneous:   160_000
+
+benchmarks:
+  concrete_m3_per_m2: 0.19
+  steel_kg_per_m2: 25

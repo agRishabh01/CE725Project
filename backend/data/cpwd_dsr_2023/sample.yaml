@@ -1,0 +1,100 @@
+# Synthetic DSR fixture for development / testing.
+# Structure mirrors CPWD DSR 2023's chapter/item/sub-item hierarchy.
+# Rates are illustrative INR values close to typical CPWD DSR 2023 for Delhi base.
+# When the real DSR PDF is available, this file is replaced by `python -m api.cli import-dsr source.pdf`.
+
+edition:
+  source: "CPWD DSR"
+  region: "Delhi"
+  year: 2023
+  effective_date: "2023-10-01"
+
+items:
+  # Chapter 1 — Earthwork
+  - {item_no: "1.1.1",  chapter: "Earthwork",            description: "Earthwork in excavation by mechanical means (hydraulic excavator) in ordinary soil including dressing of sides and ramming of bottom, lead up to 50 m",            unit: "m3", rate: 318.50}
+  - {item_no: "1.2.1",  chapter: "Earthwork",            description: "Earth filling in plinth with surplus earth from excavation, including watering and ramming in layers",                                                                   unit: "m3", rate: 178.60}
+  - {item_no: "1.3.1",  chapter: "Earthwork",            description: "Anti-termite chemical treatment to plinth area with chlorpyriphos 1% emulsion",                                                                                           unit: "m2", rate: 108.75}
+
+  # Chapter 2 — Plain and Reinforced Cement Concrete
+  - {item_no: "2.1.1",  chapter: "Concrete",             description: "Plain cement concrete 1:4:8 (one cement : four coarse sand : eight graded stone aggregate 40 mm nominal size) in foundation and under floor",                             unit: "m3", rate: 5240.00}
+  - {item_no: "2.2.1",  chapter: "Concrete",             description: "Reinforced cement concrete M20 (1:1.5:3) in isolated footings including shuttering, finishing and curing",                                                                 unit: "m3", rate: 7205.00}
+  - {item_no: "2.2.2",  chapter: "Concrete",             description: "Reinforced cement concrete M25 (nominal mix) in columns above plinth level, including shuttering, finishing and curing",                                                   unit: "m3", rate: 8945.00}
+  - {item_no: "2.2.3",  chapter: "Concrete",             description: "Reinforced cement concrete M25 in beams at plinth, floor and roof level, including shuttering, finishing and curing",                                                      unit: "m3", rate: 8510.00}
+  - {item_no: "2.2.4",  chapter: "Concrete",             description: "Reinforced cement concrete M25 in slabs (floor and roof) up to 200 mm thick, including shuttering, finishing and curing",                                                  unit: "m3", rate: 8225.00}
+  - {item_no: "2.2.5",  chapter: "Concrete",             description: "Reinforced cement concrete M25 in staircase waist slab, treads and landings, including shuttering, finishing and curing",                                                  unit: "m3", rate: 9410.00}
+
+  # Chapter 3 — Reinforcement Steel
+  - {item_no: "3.1.1",  chapter: "Reinforcement Steel",  description: "Supplying, straightening, cutting, bending and placing in position Fe 500 D grade thermo-mechanically treated steel bars for all RCC work",                                 unit: "kg", rate: 85.30}
+
+  # Chapter 4 — Formwork
+  - {item_no: "4.1.1",  chapter: "Formwork",             description: "Centring, shuttering, including strutting, propping and striking for foundations, footings and base slabs",                                                                 unit: "m2", rate: 421.00}
+  - {item_no: "4.1.2",  chapter: "Formwork",             description: "Centring and shuttering for columns, pillars, posts and struts",                                                                                                            unit: "m2", rate: 538.50}
+  - {item_no: "4.1.3",  chapter: "Formwork",             description: "Centring and shuttering for beams (plinth, floor and roof) including suspended landings",                                                                                   unit: "m2", rate: 479.00}
+  - {item_no: "4.1.4",  chapter: "Formwork",             description: "Centring and shuttering for slabs with props and staging up to 4 m lift",                                                                                                   unit: "m2", rate: 462.00}
+
+  # Chapter 5 — Brickwork
+  - {item_no: "5.1.1",  chapter: "Brickwork",            description: "Brick work with 1st class bricks in cement mortar 1:6, in walls 230 mm thick in superstructure",                                                                            unit: "m3", rate: 7785.00}
+  - {item_no: "5.1.2",  chapter: "Brickwork",            description: "Half brick (115 mm) partition walls in cement mortar 1:4 in superstructure, including MS hoop iron reinforcement",                                                         unit: "m3", rate: 7420.00}
+  - {item_no: "5.2.1",  chapter: "Brickwork",            description: "Brick work in parapet wall, 230 mm thick, 1 m high in cement mortar 1:6, with coping",                                                                                      unit: "m3", rate: 7905.00}
+
+  # Chapter 6 — Finishing — Plastering and Painting
+  - {item_no: "6.1.1",  chapter: "Finishing",            description: "12 mm thick cement plaster of mix 1:4 (one cement : four coarse sand) on inside walls, finished with sponge",                                                               unit: "m2", rate: 288.00}
+  - {item_no: "6.1.2",  chapter: "Finishing",            description: "20 mm thick cement plaster of mix 1:4 in two coats on external walls, including scaffolding",                                                                                unit: "m2", rate: 378.00}
+  - {item_no: "6.1.3",  chapter: "Finishing",            description: "6 mm thick cement plaster of mix 1:3 on ceilings and soffits of RCC slabs",                                                                                                  unit: "m2", rate: 218.00}
+  - {item_no: "6.2.1",  chapter: "Finishing",            description: "Painting with acrylic emulsion of approved brand, two coats over primer on internal walls",                                                                                  unit: "m2", rate: 110.00}
+  - {item_no: "6.2.2",  chapter: "Finishing",            description: "Painting with acrylic exterior emulsion of approved brand, two coats on external surfaces",                                                                                  unit: "m2", rate: 162.00}
+  - {item_no: "6.2.3",  chapter: "Finishing",            description: "Painting with oil-bound distemper of approved brand on walls, two coats",                                                                                                    unit: "m2", rate: 56.00}
+  - {item_no: "6.2.4",  chapter: "Finishing",            description: "Painting with premium emulsion washable of approved brand, three coats",                                                                                                     unit: "m2", rate: 189.00}
+
+  # Chapter 7 — Flooring
+  - {item_no: "7.1.1",  chapter: "Flooring",             description: "Vitrified floor tiles 600 x 600 mm, laid on 20 mm thick cement mortar bed, including grouting with coloured epoxy",                                                           unit: "m2", rate: 952.00}
+  - {item_no: "7.1.2",  chapter: "Flooring",             description: "Premium vitrified glazed floor tiles 600 x 600 mm nano-polished, laid on 20 mm bed",                                                                                          unit: "m2", rate: 1448.00}
+  - {item_no: "7.1.3",  chapter: "Flooring",             description: "Imported marble / Italian polished tile flooring 20 mm thick, laid on neat cement bed",                                                                                       unit: "m2", rate: 3185.00}
+  - {item_no: "7.2.1",  chapter: "Flooring",             description: "Skirting with vitrified tile 100 mm high, laid in cement mortar",                                                                                                             unit: "m",  rate: 178.00}
+  - {item_no: "7.2.2",  chapter: "Flooring",             description: "Premium vitrified skirting 100 mm high, laid in cement mortar with grouting",                                                                                                 unit: "m",  rate: 228.00}
+  - {item_no: "7.3.1",  chapter: "Flooring",             description: "Dado with ceramic glazed tiles 300 x 450 mm up to 2.1 m height in wet areas, laid on 12 mm plaster",                                                                          unit: "m2", rate: 648.00}
+  - {item_no: "7.3.2",  chapter: "Flooring",             description: "Dado with ceramic designer tiles 300 x 600 mm up to 2.1 m height in wet areas",                                                                                               unit: "m2", rate: 848.00}
+  - {item_no: "7.4.1",  chapter: "Flooring",             description: "Anti-skid ceramic floor tiles 300 x 300 mm in toilet and wet floors, laid on cement bed",                                                                                     unit: "m2", rate: 852.00}
+
+  # Chapter 8 — Doors and Windows
+  - {item_no: "8.1.1",  chapter: "Doors Windows",        description: "Flush door shutter 35 mm thick, both face commercial ply veneered, non-decorative, for internal use",                                                                        unit: "m2", rate: 2798.00}
+  - {item_no: "8.1.2",  chapter: "Doors Windows",        description: "WPC door shutter 35 mm thick with laminate finish, pre-polished, for internal use",                                                                                           unit: "m2", rate: 4198.00}
+  - {item_no: "8.1.3",  chapter: "Doors Windows",        description: "Teak panelled main entrance door shutter 40 mm thick, French polished with brass fittings",                                                                                   unit: "m2", rate: 18020.00}
+  - {item_no: "8.2.1",  chapter: "Doors Windows",        description: "Door frame of hard wood (Sal / Teak) 60 x 100 mm section, including iron hold-fasts and primer coat",                                                                         unit: "m",  rate: 818.00}
+  - {item_no: "8.3.1",  chapter: "Doors Windows",        description: "Aluminium sliding window 2-track, with 4 mm toughened glass and powder-coated frame section",                                                                                 unit: "m2", rate: 2210.00}
+  - {item_no: "8.3.2",  chapter: "Doors Windows",        description: "UPVC sliding window 3-track with 5 mm glazed glass and multi-point lock",                                                                                                     unit: "m2", rate: 3410.00}
+  - {item_no: "8.3.3",  chapter: "Doors Windows",        description: "UPVC double-glazed slimline window with argon fill, including hinges and locks",                                                                                              unit: "m2", rate: 6188.00}
+  - {item_no: "8.4.1",  chapter: "Doors Windows",        description: "Mild steel grill in windows and ventilators of approved pattern, fixed with iron fasteners",                                                                                  unit: "kg", rate: 182.00}
+
+  # Chapter 9 — Waterproofing
+  - {item_no: "9.1.1",  chapter: "Waterproofing",        description: "APP modified bitumen waterproofing membrane 4 mm thick with protective screed on terraces",                                                                                    unit: "m2", rate: 418.00}
+  - {item_no: "9.1.2",  chapter: "Waterproofing",        description: "Polymer modified cementitious waterproofing coating in toilet and wet areas, two coats",                                                                                      unit: "m2", rate: 652.00}
+  - {item_no: "9.1.3",  chapter: "Waterproofing",        description: "Premium PU waterproofing membrane on exposed terraces, two coats with primer",                                                                                                unit: "m2", rate: 820.00}
+
+  # Chapter 10 — Electrical
+  - {item_no: "10.1.1", chapter: "Electrical",           description: "Wiring for light / fan / exhaust point with 1.5 sq.mm FR PVC insulated copper conductor cable in PVC conduit",                                                               unit: "nos", rate: 955.00}
+  - {item_no: "10.1.2", chapter: "Electrical",           description: "Wiring for power point with 2.5 sq.mm FR PVC insulated copper conductor cable in PVC conduit",                                                                                unit: "nos", rate: 1308.00}
+  - {item_no: "10.2.1", chapter: "Electrical",           description: "Main distribution board with MCB and ELCB, factory assembled, including cabling to switch gear",                                                                              unit: "nos", rate: 42150.00}
+
+  # Chapter 11 — Plumbing and Sanitary
+  - {item_no: "11.1.1", chapter: "Plumbing",             description: "Internal CPVC plumbing lines and fittings for one toilet, including concealed valves and GI distribution",                                                                     unit: "nos", rate: 25000.00}
+  - {item_no: "11.2.1", chapter: "Sanitary",             description: "Standard sanitary fittings for one toilet — EWC, wash basin, bath mixer, hand shower, plumbing accessories (standard spec)",                                                  unit: "nos", rate: 42000.00}
+  - {item_no: "11.2.2", chapter: "Sanitary",             description: "Premium sanitary fittings for one toilet — concealed cistern WC, counter basin, rain shower, mixer taps (premium spec)",                                                     unit: "nos", rate: 95000.00}
+  - {item_no: "11.2.3", chapter: "Sanitary",             description: "Basic sanitary fittings for one toilet — Indian pan, PVC flushing cistern, bib tap, floor trap (basic spec)",                                                                 unit: "nos", rate: 18000.00}
+
+  # Chapter 12 — External Works
+  - {item_no: "12.1.1", chapter: "External Works",       description: "Brick compound wall 1.8 m high, 230 mm thick, with RCC coping and plaster both sides",                                                                                        unit: "m",   rate: 2412.00}
+  - {item_no: "12.2.1", chapter: "External Works",       description: "Driveway paving with M20 cement concrete 100 mm thick on 100 mm granular sub-base with wire mesh",                                                                            unit: "m2",  rate: 825.00}
+  - {item_no: "12.3.1", chapter: "External Works",       description: "Mild steel twin-leaf main gate 3 m wide with pivot hinges and bolts, enamel painted",                                                                                         unit: "nos", rate: 32100.00}
+  - {item_no: "12.4.1", chapter: "External Works",       description: "Landscaping with lawn, decorative plants, pathways and site furniture — lump sum per site",                                                                                   unit: "nos", rate: 45000.00}
+
+  # Chapter 13 — Water Supply and Rainwater
+  - {item_no: "13.1.1", chapter: "Water Supply",         description: "Overhead PVC water tank 1000 L capacity, Sintex make, on RCC supports, including inlet-outlet piping",                                                                        unit: "nos", rate: 18100.00}
+  - {item_no: "13.1.2", chapter: "Water Supply",         description: "Underground sump 10 KL capacity in RCC with manhole, waterproofed inside",                                                                                                    unit: "nos", rate: 85200.00}
+  - {item_no: "13.2.1", chapter: "Water Supply",         description: "Rainwater harvesting recharge pit with filter media and recharge well, 3 m deep",                                                                                             unit: "nos", rate: 32100.00}
+
+  # Chapter 14 — Vertical Transportation
+  - {item_no: "14.1.1", chapter: "Lift",                 description: "Passenger lift of 6-person capacity, standard specification, for building up to G+5",                                                                                         unit: "nos", rate: 1250000.00}
+
+  # Chapter 15 — False Ceiling and Miscellaneous
+  - {item_no: "15.1.1", chapter: "Finishing",            description: "False ceiling with 12 mm gypsum board on GI framework, including taping, jointing and paint, in common areas",                                                                unit: "m2",  rate: 1248.00}

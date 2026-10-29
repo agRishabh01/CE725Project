@@ -1,0 +1,46 @@
+# Reference case 03 — small 2-storey office, RCC framed, standard spec.
+#
+# Source: adapted from CPWD Type-IV institutional office template at
+#         DSR 2023 Delhi (cost index 1.00). Verified against published
+#         Rangwala §12.5 office example.
+# Role  : HELD OUT — not used to tune coefficients. Gate 2 held-out
+#         variance must stay inside ±25% without touching anything.
+
+case_id: case_03_g1_office_rcc_standard
+split: held_out
+source: "CPWD Type-IV institutional office at DSR 2023 Delhi, 2-storey"
+
+building_params:
+  use_type: office
+  plot_area_m2: 800.0
+  builtup_area_m2: 900.0        # 2 floors × 450 m²
+  floors: 2
+  floor_height_m: 3.3
+  aspect_ratio: 1.6
+  structural_system: rcc_framed
+  spec_level: standard
+  sbc_kpa: 180.0
+  plan_shape: rectangular
+  location: Delhi
+  source: form
+
+cost_index: 1.00
+
+expected:
+  total_inr: 14_000_000          # ~₹15,555 / m²
+  cost_per_m2: 15_555
+  # 2-storey office — no lift (floors<4), modest site works.
+  by_element:
+    substructure:    550_000
+    frame:         3_600_000
+    masonry:       1_250_000
+    finishes:      2_900_000
+    doors_windows: 1_650_000
+    waterproofing:   310_000
+    services:      1_880_000
+    external_works:  700_000
+    miscellaneous:   160_000
+
+benchmarks:
+  concrete_m3_per_m2: 0.22
+  steel_kg_per_m2: 32

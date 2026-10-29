@@ -1,0 +1,58 @@
+# Basic specification — government/affordable housing baseline.
+# Rates are placeholders (INR / unit) until the DSR is imported in W4.
+
+spec_id: basic
+version: "0.1.0"
+label: "Basic (affordable / govt. baseline)"
+
+flooring:
+  material: "vitrified_tiles_600x600"
+  rate_inr_per_m2: 950
+
+skirting:
+  material: "vitrified_skirting_100mm"
+  rate_inr_per_m: 180
+
+dado:
+  material: "ceramic_tiles_300x450"
+  rate_inr_per_m2: 650
+  height_m: 2.1                       # wet-area dado height
+
+internal_plaster:
+  thickness_mm: 12
+  rate_inr_per_m2: 240
+
+external_plaster:
+  thickness_mm: 20
+  rate_inr_per_m2: 320
+
+internal_paint:
+  material: "oil_bound_distemper"
+  rate_inr_per_m2: 55
+
+external_paint:
+  material: "cement_based_paint"
+  rate_inr_per_m2: 90
+
+doors:
+  material: "flush_door_internal"
+  rate_inr_per_m2: 2800
+  main_door_rate_inr_per_m2: 4200
+  average_leaf_m2: 1.89                # 900 × 2100
+
+windows:
+  material: "aluminium_sliding_2track"
+  rate_inr_per_m2: 2200
+  wwr: 0.12                            # window-to-wall ratio on external walls
+
+sanitary:
+  per_toilet_lumpsum_inr: 18000
+  toilets_per_100m2_builtup: 1.2
+
+electrical:
+  points_per_m2_builtup: 0.55
+  rate_inr_per_point: 950
+
+waterproofing:
+  terrace_rate_inr_per_m2: 420
+  toilet_rate_inr_per_m2: 650

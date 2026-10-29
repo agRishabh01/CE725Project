@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Env + local DB
+.env
+dev.db
+dev.db-journal
+*.sqlite3
+
+# Node
+node_modules/
+.next/
+.turbo/
+out/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Build/outputs
+dist/
+build/
+
+# Data drops (large source PDFs)
+backend/data/cpwd_dsr_2023/*.pdf
+backend/data/**/*.pdf
+!backend/data/**/.gitkeep

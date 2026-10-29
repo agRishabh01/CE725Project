@@ -1,0 +1,62 @@
+# Load-bearing masonry — walls carry gravity load, no frame.
+# Suitable for up to G+3. Beyond that, use RCC framed or flat slab.
+# No columns; load bears on strip footings. RCC bands at plinth/sill/lintel/roof.
+
+rule_set_id: load_bearing
+version: "0.1.0"
+system: load_bearing
+applicable_floors: [1, 4]
+source: "IS 1905; SP 20; Rangwala §13"
+
+geometry:
+  # 'span' here = max unsupported wall-to-wall room dimension.
+  default_span_m: 3.6
+  min_bay_m: 2.5
+  max_bay_m: 5.0
+
+sizing:
+  # No columns in masonry. We keep the schema uniform so the engine can share code,
+  # but these values are only used as fallbacks in rare mixed-system computations.
+  column_tiers:
+    - {min_floors: 1, max_floors: 4, b_mm: 0, d_mm: 0}
+
+  # Lintel + plinth + roof bands are 150 mm RCC bands running continuously.
+  beam:
+    depth_divisor: 24            # thin bands, not deep beams
+    width_mm: 230                # same as wall thickness
+    min_depth_mm: 150
+    rounding_mm: 25
+
+  slab:
+    divisor: 30
+    min_thickness_mm: 125
+    max_thickness_mm: 175
+    rounding_mm: 25
+
+  # Strip footing under each load-bearing wall. We model as 'equivalent isolated'
+  # using an average tributary area for cost — sum stays correct.
+  footing:
+    load_per_m2_per_floor_kn: 12.0  # lighter than framed
+    self_weight_factor: 1.08
+    min_side_m: 0.9
+    depth_mm: 250
+    pcc_thickness_mm: 75
+
+# Masonry-specific: wall thickness by storey (bottom-up).
+masonry:
+  external_wall_thickness_mm:
+    - {min_floors_from_top: 1, thickness_mm: 230}
+    - {min_floors_from_top: 3, thickness_mm: 345}      # bottom storeys of G+2+ get thicker
+    - {min_floors_from_top: 4, thickness_mm: 450}
+
+consumption:
+  steel_kg_per_m3:
+    column: 0                    # none
+    beam: 90                     # bands
+    slab: 70
+    footing: 50
+  formwork_m2_per_m3:
+    column: 0
+    beam: 6
+    slab: 5
+    footing: 1.5

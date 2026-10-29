@@ -1,0 +1,58 @@
+# Premium specification — high-end residential / corporate office / hotel public areas.
+# Rates are placeholders (INR / unit) until the DSR is imported in W4.
+
+spec_id: premium
+version: "0.1.0"
+label: "Premium (high-end residential / corporate / hotel)"
+
+flooring:
+  material: "italian_marble_or_imported_tile"
+  rate_inr_per_m2: 3200
+
+skirting:
+  material: "marble_skirting_100mm"
+  rate_inr_per_m: 420
+
+dado:
+  material: "designer_tiles_600x600"
+  rate_inr_per_m2: 1800
+  height_m: 2.4
+
+internal_plaster:
+  thickness_mm: 15
+  rate_inr_per_m2: 350
+
+external_plaster:
+  thickness_mm: 20
+  rate_inr_per_m2: 450
+
+internal_paint:
+  material: "premium_emulsion_washable"
+  rate_inr_per_m2: 190
+
+external_paint:
+  material: "weathershield_hi_build"
+  rate_inr_per_m2: 265
+
+doors:
+  material: "teak_panelled"
+  rate_inr_per_m2: 11500
+  main_door_rate_inr_per_m2: 18000
+  average_leaf_m2: 2.10
+
+windows:
+  material: "upvc_double_glazed_slimline"
+  rate_inr_per_m2: 6200
+  wwr: 0.20
+
+sanitary:
+  per_toilet_lumpsum_inr: 95000
+  toilets_per_100m2_builtup: 1.8
+
+electrical:
+  points_per_m2_builtup: 1.10
+  rate_inr_per_point: 1850
+
+waterproofing:
+  terrace_rate_inr_per_m2: 820
+  toilet_rate_inr_per_m2: 1150
